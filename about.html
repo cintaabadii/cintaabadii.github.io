@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About: Membangun Keluarga Harmonis Melalui Pernikahan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #e75480;
+      --secondary-color: #f9f3f3;
+      --accent-color: #d3567a;
+      --text-color: #333333;
+      --light-color: #ffffff;
+    }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    header {
+      max-width: 48rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      padding: 2rem 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.125rem;
+    }
+    main {
+      max-width: 48rem;
+      width: 100%;
+      background-color: var(--light-color);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem 2rem;
+    }
+    section.about {
+      margin-bottom: 2rem;
+    }
+    section.about h2 {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+    }
+    section.about p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    section.team ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    section.team li {
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        padding: 1rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Membangun Keluarga Harmonis Melalui Pernikahan</h1>
+    <p>Tentang Website dan Anggota Kelompok</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>Tentang Website Ini</h2>
+      <p>Website ini dibuat sebagai media pembelajaran interaktif dengan tema "Membangun Keluarga Harmonis Melalui Pernikahan". Di dalamnya terdapat materi, tips, cerita nyata, dan pantun yang bertujuan untuk memperkuat pemahaman dan membangun keluarga yang harmonis melalui pernikahan.</p>
+    </section>
+
+    <section class="team">
+      <h2>Anggota Kelompok</h2>
+      <div class="members-container">
+        <div class="member">
+          <img src="images/candra.jpg" alt="Bagus Chandra Priyatna" class="member-photo" />
+          <p>Bagus Chandra Priyatna</p>
+          <p>24111814129</p>
+        </div>
+        <div class="member">
+          <img src="images/pio.jpg" alt="Oktavio Dwi Prasetyo" class="member-photo" />
+          <p>Oktavio Dwi Prasetyo</p>
+          <p>24111814085</p>
+        </div>
+        <div class="member">
+          <img src="images/wendy-friska-prastya.jpg" alt="Wendy Friska Prastya" class="member-photo" />
+          <p>Wendy Friska Prastya</p>
+          <p>2411814086</p>
+        </div>
+        <div class="member">
+          <img src="images/fandy-ahmad-febrian.jpg" alt="Fandy Ahmad Febrian" class="member-photo" />
+          <p>Fandy Ahmad Febrian</p>
+          <p>24111814131</p>
+        </div>
+        <div class="member">
+          <img src="images/tabligh-akbar.jpg" alt="Tabligh Akbar" class="member-photo" />
+          <p>Tabligh Akbar</p>
+          <p>24111814134</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .members-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      justify-items: center;
+    }
+    .member {
+      background-color: #fde8f0;
+      border-left: 4px solid var(--accent-color);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      width: 140px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .member-photo {
+      border-radius: 50%;
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+      border: 2px solid var(--primary-color);
+    }
+    .member p {
+      margin: 0.25rem 0;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+  </style>
+</body>
+</html>

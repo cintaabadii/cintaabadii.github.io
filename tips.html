@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tips: Membangun Keluarga Harmonis Melalui Pernikahan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #e75480;
+      --secondary-color: #f9f3f3;
+      --accent-color: #d3567a;
+      --text-color: #333333;
+      --light-color: #ffffff;
+    }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    header {
+      max-width: 48rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      padding: 2rem 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.125rem;
+    }
+    main {
+      max-width: 48rem;
+      width: 100%;
+      background-color: var(--light-color);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem 2rem;
+    }
+    section.material {
+      margin-bottom: 2rem;
+    }
+    section.material h2 {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+    }
+    section.material ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      line-height: 1.6;
+    }
+    section.material ul li {
+      margin-bottom: 0.75rem;
+    }
+    section#quiz-section h2 {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+    }
+    form#quiz-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .question {
+      border: 2px solid var(--primary-color);
+      border-radius: 0.5rem;
+      padding: 1rem 1.25rem;
+      background-color: var(--light-color);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .question.correct {
+      background-color: #fce7f3; /* pink-100 */
+      border-color: #db2777; /* pink-600 */
+      color: #831843; /* pink-900 */
+    }
+    .question.incorrect {
+      background-color: #fee2e2; /* red-100 */
+      border-color: #ef4444; /* red-500 */
+      color: #991b1b; /* red-800 */
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      padding-left: 1.5rem;
+      position: relative;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+    label.correct {
+      color: #831843; /* pink-900 */
+      font-weight: 700;
+    }
+    label.incorrect {
+      color: #991b1b; /* red-800 */
+      font-weight: 700;
+    }
+    label input[type="radio"] {
+      position: absolute;
+      left: 0;
+      top: 0.25rem;
+      cursor: pointer;
+    }
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+    }
+    button[type="submit"]:hover {
+      background-color: #c43a6e; /* darker pink */
+    }
+    #result {
+      margin-top: 1.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-align: center;
+      color: var(--primary-color);
+    }
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        padding: 1rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Membangun Keluarga Harmonis Melalui Pernikahan</h1>
+    <p>Tips untuk membangun keluarga harmonis melalui pernikahan</p>
+  </header>
+
+  <main>
+    <section class="material">
+      <h2>Tips Penting</h2>
+      <ul>
+        <li>Berkomunikasi secara terbuka dan jujur dengan pasangan Anda.</li>
+        <li>Luangkan waktu berkualitas bersama untuk mempererat hubungan.</li>
+        <li>Hormati perbedaan dan belajar untuk saling memahami.</li>
+        <li>Bangun kepercayaan dengan konsistensi dan kesetiaan.</li>
+        <li>Kelola konflik dengan cara yang sehat dan konstruktif.</li>
+        <li>Dukung pertumbuhan pribadi dan bersama sebagai pasangan.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

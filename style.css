@@ -1,0 +1,144 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #ffffff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.05);
+    flex-wrap: wrap;
+  }
+  
+  .navbar .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  
+  .navbar .nav-links li a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links li a:hover,
+  .navbar .nav-links li a.active {
+    color: #f06292;
+  }
+  
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #1c1c1c, #2d2d2d);
+    border-bottom: 1px solid #333;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  /* Menu Section */
+  .menu {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .menu h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* FIXED: 3 kolom di semua ukuran */
+    gap: 15px;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 10px;
+  }
+  
+  .menu-item {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px rgba(240, 98, 146, 0.3);
+  }
+  
+  .menu-item span {
+    font-size: 28px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .menu-item button {
+    background-color: #f06292;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 100px;
+    transition: background 0.3s ease;
+  }
+  
+  .menu-item button:hover {
+    background-color: #ec407a;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      margin: 5px 0;
+    }
+  
+    .hero h1 {
+      font-size: 22px;
+    }
+  
+    /* Tidak ubah grid jadi 1 atau 2 kolom, tetap 3 */
+  }
+  

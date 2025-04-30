@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Belajar - Cinta Abadi</title>
+    <style>
+        :root {
+            --primary-color: #e75480;
+            --secondary-color: #f9f3f3;
+            --accent-color: #d3567a;
+            --text-color: #333;
+            --light-color: #fff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--secondary-color);
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: var(--accent-color);
+        }
+        
+        .module-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .module-card {
+            background: var(--light-color);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .module-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .module-icon {
+            font-size: 2em;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+        
+        .lesson-list {
+            padding-left: 20px;
+        }
+        
+        .lesson-item {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .lesson-item:before {
+            content: "✓";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .progress-bar {
+            height: 20px;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: width 1s ease;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .module-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Modul Belajar</h1>
+        <p>Membangun Keluarga Harmonis Melalui Pernikahan</p>
+    </header>
+
+    <section>
+        <h2>Program Pembelajaran</h2>
+        <p>Pilih modul belajar untuk memperkuat hubungan pernikahan Anda:</p>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="module-container">
+            <!-- Modul 1 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-icon">❤️</div>
+                    <h3>Komunikasi Pasangan</h3>
+                </div>
+                <p>Belajar teknik komunikasi efektif untuk membangun keharmonisan rumah tangga.</p>
+                <ul class="lesson-list">
+                    <li class="lesson-item">Dasar-dasar komunikasi sehat</li>
+                    <li class="lesson-item">Mendengar aktif dalam pernikahan</li>
+                    <li class="lesson-item">Mengelola konflik dengan bijak</li>
+                    <li class="lesson-item">Bahasa cinta dalam pernikahan</li>
+                    <li class="lesson-item">Komunikasi digital pasangan</li>
+                </ul>
+            </div>
+            
+            <!-- Modul 2 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-icon">👨‍👩‍👧</div>
+                    <h3>Manajemen Keluarga</h3>
+                </div>
+                <p>Strategi mengelola rumah tangga dan membangun keluarga yang seimbang.</p>
+                <ul class="lesson-list">
+                    <li class="lesson-item">Pembagian peran dalam rumah tangga</li>
+                    <li class="lesson-item">Manajemen keuangan keluarga</li>
+                    <li class="lesson-item">Menjaga keseimbangan kerja-keluarga</li>
+                    <li class="lesson-item">Pengasuhan anak bersama</li>
+                    <li class="lesson-item">Menjaga hubungan dengan keluarga besar</li>
+                </ul>
+            </div>
+            
+            <!-- Modul 3 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-icon">💑</div>
+                    <h3>Keintiman Pernikahan</h3>
+                </div>
+                <p>Memelihara keintiman dan menjaga api cinta dalam pernikahan.</p>
+                <ul class="lesson-list">
+                    <li class="lesson-item">Memahami kebutuhan pasangan</li>
+                    <li class="lesson-item">Menjaga romantisme setelah menikah</li>
+                    <li class="lesson-item">Keintiman fisik dan emosional</li>
+                    <li class="lesson-item">Mengatasi masalah seksual</li>
+                    <li class="lesson-item">Ritual pasangan yang mempererat</li>
+                </ul>
+            </div>
+            
+            <!-- Modul 4 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-icon">🕊️</div>
+                    <h3>Resolusi Konflik</h3>
+                </div>
+                <p>Teknik menyelesaikan perbedaan pendapat dengan cara yang sehat.</p>
+                <ul class="lesson-list">
+                    <li class="lesson-item">Sumber konflik dalam pernikahan</li>
+                    <li class="lesson-item">Teknik negosiasi pasangan</li>
+                    <li class="lesson-item">Memahami pola konflik pribadi</li>
+                    <li class="lesson-item">Meminta maaf dan memaafkan</li>
+                    <li class="lesson-item">Mencegah konflik berulang</li>
+                </ul>
+            </div>
+            
+            <!-- Modul 5 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-icon">🌱</div>
+                    <h3>Pertumbuhan Bersama</h3>
+                </div>
+                <p>Strategi berkembang bersama sebagai pasangan dan individu.</p>
+                <ul class="lesson-list">
+                    <li class="lesson-item">Menetapkan tujuan bersama</li>
+                    <li class="lesson-item">Mendukung perkembangan pribadi</li>
+                    <li class="lesson-item">Belajar hal baru bersama</li>
+                    <li class="lesson-item">Menjaga hubungan tetap segar</li>
+                    <li class="lesson-item">Menghadapi perubahan dalam pernikahan</li>
+                </ul>
+            </div>
+            
+            <!-- Modul 6 -->
+            <div class="module-card">
+                <div class="module-header">
+                    <div class="module-icon">🙏</div>
+                    <h3>Spiritualitas Pernikahan</h3>
+                </div>
+                <p>Menguatkan ikatan pernikahan melalui nilai-nilai spiritual.</p>
+                <ul class="lesson-list">
+                    <li class="lesson-item">Peran spiritual dalam pernikahan</li>
+                    <li class="lesson-item">Ritual spiritual pasangan</li>
+                    <li class="lesson-item">Memaknai pernikahan secara mendalam</li>
+                    <li class="lesson-item">Menghadapi ujian dalam pernikahan</li>
+                    <li class="lesson-item">Bersyukur atas hubungan</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cinta Abadi. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // Simple progress bar animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.getElementById('progressBar');
+            // Simulate 25% progress
+            setTimeout(() => {
+                progressBar.style.width = '25%';
+                progressBar.textContent = '25%';
+            }, 500);
+        });
+    </script>
+</body>
+</html>

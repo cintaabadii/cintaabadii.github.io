@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz: Membangun Keluarga Harmonis Melalui Pernikahan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #e75480;
+      --secondary-color: #f9f3f3;
+      --accent-color: #d3567a;
+      --text-color: #333333;
+      --light-color: #ffffff;
+    }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    header {
+      max-width: 48rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      padding: 2rem 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.125rem;
+    }
+    main {
+      max-width: 48rem;
+      width: 100%;
+      background-color: var(--light-color);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem 2rem;
+    }
+    section.material {
+      margin-bottom: 2rem;
+    }
+    section.material h2 {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+    }
+    section.material p {
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+    section#quiz-section h2 {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+    }
+    form#quiz-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .question {
+      border: 2px solid var(--primary-color);
+      border-radius: 0.5rem;
+      padding: 1rem 1.25rem;
+      background-color: var(--light-color);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .question.correct {
+      background-color: #fce7f3; /* pink-100 */
+      border-color: #db2777; /* pink-600 */
+      color: #831843; /* pink-900 */
+    }
+    .question.incorrect {
+      background-color: #fee2e2; /* red-100 */
+      border-color: #ef4444; /* red-500 */
+      color: #991b1b; /* red-800 */
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      padding-left: 1.5rem;
+      position: relative;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+    label.correct {
+      color: #831843; /* pink-900 */
+      font-weight: 700;
+    }
+    label.incorrect {
+      color: #991b1b; /* red-800 */
+      font-weight: 700;
+    }
+    label input[type="radio"] {
+      position: absolute;
+      left: 0;
+      top: 0.25rem;
+      cursor: pointer;
+    }
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+    }
+    button[type="submit"]:hover {
+      background-color: #c43a6e; /* darker pink */
+    }
+    #result {
+      margin-top: 1.5rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-align: center;
+      color: var(--primary-color);
+    }
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        padding: 1rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Membangun Keluarga Harmonis Melalui Pernikahan</h1>
+    <p>Pelajari materi berikut dan uji pemahaman Anda melalui kuis pilihan ganda di bawah ini.</p>
+  </header>
+
+  <main>
+    <section class="material">
+      <h2>Materi Singkat</h2>
+      <p>
+        Pernikahan adalah fondasi utama dalam membangun keluarga yang harmonis. Komunikasi yang baik, saling pengertian, dan komitmen adalah kunci utama untuk menjaga keharmonisan dalam rumah tangga. Melalui pernikahan yang sehat, pasangan dapat menciptakan lingkungan yang penuh cinta, rasa hormat, dan dukungan satu sama lain.
+      </p>
+      <p>
+        Dalam kuis ini, Anda akan diuji mengenai pemahaman tentang prinsip-prinsip membangun keluarga harmonis melalui pernikahan. Jawablah setiap pertanyaan dengan seksama.
+      </p>
+    </section>
+
+    <section id="quiz-section">
+      <h2>Kuis</h2>
+      <form id="quiz-form">
+        <!-- Question 1 -->
+        <div class="question" data-correct="a">
+          <p>1. Apa kunci utama dalam menjaga keharmonisan rumah tangga?</p>
+          <label>
+            <input type="radio" name="q1" value="a" />
+            Komunikasi yang baik dan saling pengertian
+          </label>
+          <label>
+            <input type="radio" name="q1" value="b" />
+            Memiliki banyak harta benda
+          </label>
+          <label>
+            <input type="radio" name="q1" value="c" />
+            Menghindari berbicara satu sama lain
+          </label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question" data-correct="b">
+          <p>2. Apa yang dapat menciptakan lingkungan penuh cinta dalam keluarga?</p>
+          <label>
+            <input type="radio" name="q2" value="a" />
+            Saling menghina dan bersaing
+          </label>
+          <label>
+            <input type="radio" name="q2" value="b" />
+            Komitmen dan rasa hormat satu sama lain
+          </label>
+          <label>
+            <input type="radio" name="q2" value="c" />
+            Mengabaikan masalah rumah tangga
+          </label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question" data-correct="c">
+          <p>3. Apa manfaat komunikasi yang baik dalam pernikahan?</p>
+          <label>
+            <input type="radio" name="q3" value="a" />
+            Membuat pasangan merasa diabaikan
+          </label>
+          <label>
+            <input type="radio" name="q3" value="b" />
+            Menimbulkan konflik yang tidak perlu
+          </label>
+          <label>
+            <input type="radio" name="q3" value="c" />
+            Meningkatkan saling pengertian dan kepercayaan
+          </label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question" data-correct="a">
+          <p>4. Bagaimana cara terbaik untuk mengelola konflik dalam pernikahan?</p>
+          <label>
+            <input type="radio" name="q4" value="a" />
+            Berkomunikasi dengan jujur dan terbuka
+          </label>
+          <label>
+            <input type="radio" name="q4" value="b" />
+            Mengabaikan masalah sampai hilang sendiri
+          </label>
+          <label>
+            <input type="radio" name="q4" value="c" />
+            Menyalahkan pasangan secara terus-menerus
+          </label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question" data-correct="b">
+          <p>5. Apa peran komitmen dalam membangun keluarga harmonis?</p>
+          <label>
+            <input type="radio" name="q5" value="a" />
+            Membuat pasangan merasa tertekan
+          </label>
+          <label>
+            <input type="radio" name="q5" value="b" />
+            Menjaga kesetiaan dan saling mendukung
+          </label>
+          <label>
+            <input type="radio" name="q5" value="c" />
+            Mengabaikan kebutuhan pasangan
+          </label>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question" data-correct="c">
+          <p>6. Mengapa penting untuk saling menghormati dalam pernikahan?</p>
+          <label>
+            <input type="radio" name="q6" value="a" />
+            Agar bisa saling mengontrol
+          </label>
+          <label>
+            <input type="radio" name="q6" value="b" />
+            Untuk menghindari komunikasi
+          </label>
+          <label>
+            <input type="radio" name="q6" value="c" />
+            Membangun kepercayaan dan rasa aman
+          </label>
+        </div>
+
+        <button type="submit">Submit Jawaban</button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <script>
+    const quizForm = document.getElementById('quiz-form');
+    const resultDiv = document.getElementById('result');
+    const questions = document.querySelectorAll('.question');
+
+    quizForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      let score = 0;
+      let total = questions.length;
+
+      questions.forEach((question) => {
+        const correctAnswer = question.getAttribute('data-correct');
+        const selected = question.querySelector('input[type="radio"]:checked');
+
+        // Reset classes
+        question.classList.remove('correct', 'incorrect');
+        question.querySelectorAll('label').forEach(label => {
+          label.classList.remove('correct', 'incorrect');
+        });
+
+        if (selected) {
+          if (selected.value === correctAnswer) {
+            score++;
+            question.classList.add('correct');
+            selected.parentElement.classList.add('correct');
+          } else {
+            question.classList.add('incorrect');
+            selected.parentElement.classList.add('incorrect');
+            const correctLabel = question.querySelector('input[value="' + correctAnswer + '"]').parentElement;
+            correctLabel.classList.add('correct');
+          }
+        } else {
+          question.classList.add('incorrect');
+          const correctLabel = question.querySelector('input[value="' + correctAnswer + '"]').parentElement;
+          correctLabel.classList.add('correct');
+        }
+      });
+
+      resultDiv.textContent = `Skor Anda: ${score} dari ${total}`;
+    });
+  </script>
+</body>
+</html>
