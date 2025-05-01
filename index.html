@@ -133,6 +133,47 @@
         padding: 0.5rem 0.9rem;
       }
     }
+
+    /* Tambahan bagian bawah */
+    .quote {
+      text-align: center;
+      margin-top: 3rem;
+      font-style: italic;
+      color: #d3567a;
+      font-size: 1.1rem;
+    }
+
+    .to-top-btn {
+      margin-top: 2rem;
+      background: linear-gradient(to right, #e75480, #ff7c9e);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(231, 84, 128, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    .to-top-btn:hover {
+      background: linear-gradient(to right, #d3466f, #f76590);
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #ffe0ec;
+      border-top: 2px solid #f8b6c5;
+      color: #e75480;
+      width: 100%;
+    }
+
+    footer a {
+      color: #d3567a;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -169,5 +210,17 @@
       </div>
     </div>
   </section>
+
+  <!-- Tambahan bagian bawah -->
+  <div class="quote">
+    <p>"Cinta sejati adalah ketika kebahagiaan orang lain lebih penting dari kebahagiaanmu sendiri."</p>
+  </div>
+
+  <button class="to-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">🔝 Kembali ke Atas</button>
+
+  <footer>
+    <p>&copy; 2025 <strong>Cinta Abadi</strong>. All rights reserved.</p>
+    <p>Kontak: <a href="mailto:info@cintaabadi.id">info@cintaabadi.id</a></p>
+  </footer>
 </body>
 </html>
